@@ -254,10 +254,3 @@ def set_scheduler_params(args):
         args.cosinelr_period = 50
 
     return args
-
-
-def accuracy(logit, label):
-    _, preds = torch.max(logit, 1)
-    correct = (preds == label).sum().item()
-
-    return 100 * correct / len(label)

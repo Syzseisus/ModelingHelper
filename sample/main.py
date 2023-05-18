@@ -15,7 +15,8 @@ import torchvision.transforms as T
 
 # import python files
 from models.model import MyModel
-from utils.utils import set_random_seed, accuracy, parameter_parser, Loader
+from utils.metrics import accuracy
+from utils.utils import set_random_seed, parameter_parser, Loader
 
 # setting scheduler
 from torch.optim.lr_scheduler import StepLR, LambdaLR, CosineAnnealingLR
