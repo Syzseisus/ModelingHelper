@@ -141,9 +141,6 @@ class MyProject(object):
                 desc = f"  Valid - Counter: {counter}/{self.args.patience}" if mode == 'valid' else '  Test '
                 pbar.set_description(desc)
 
-                self.model.train()
-                self.optimizer.zero_grad()
-
                 X = X.to(self.device)
                 y = y.to(self.device)
                 logit = self.model(X)
